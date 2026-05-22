@@ -1,0 +1,111 @@
+:root {
+  --bgprimary-color: #0d0d11;
+  --bgcard-color: #16161f;
+  --primary-color:  #f4f4f6;
+  --texted-muted: #9595a3;
+  --red-accent: #ff3344;
+  --red-gradient: linear-gradient(135deg, var(--bgcard-color) 50%, #b3001b 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bgprimary-color);
+  color: var(--primary-color);
+  line-height: 1.6rem;
+}
+
+header {
+  background-color: var(--bgcard-color);
+  width: 100%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  gap: 15px;
+  align-items: center;
+  width: 100%; 
+  z-index: 1;
+}
+
+header a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+}
+header a:hover {
+  color: var(--texted-muted);
+  text-decoration: none;
+}
+
+#welcome-section {
+  padding: 75px 10px 60px 20px;
+  text-align: center;
+}
+
+#project-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.project-tile {
+  background-color: var(--bgcard-color);
+  letter-spacing: 1px;
+  padding: 15px;
+  text-align: center;
+}
+.project-tile:hover {
+border: 1px solid var(--red-accent);
+}
+
+.project-tile a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--red-accent);
+  
+}
+.project-tile a:hover {
+  color: var(--texted-muted);
+  text-decoration: none;
+}
+
+#contact {
+  background-image: var(--red-gradient);
+  text-align: center;
+  padding: 60px 20px;
+}
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding-top: 40px;
+}
+
+#contact a:hover {
+  color: var(--texted-muted)
+}
+
+@media (max-width: 600px) {
+
+#welcome-section h1 {
+  line-height: 1.8rem;
+}
+#contact {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+}
